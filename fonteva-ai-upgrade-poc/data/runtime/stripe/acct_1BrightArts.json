@@ -1,0 +1,39 @@
+{
+  "accountId": "acct_1BrightArts",
+  "displayName": "Bright Arts Foundation — Stripe",
+  "livemode": true,
+  "webhooks": [
+    {
+      "id": "we_existing_org_bright_arts",
+      "url": "https://payments.fonteva.example/org_bright_arts/webhook",
+      "events": [
+        "charge.succeeded",
+        "invoice.payment_succeeded"
+      ],
+      "status": "enabled"
+    }
+  ],
+  "rates": [
+    {
+      "currency": "USD",
+      "percent": 2.9,
+      "fixedCents": 30
+    }
+  ],
+  "payouts": [
+    {
+      "id": "po_hist_1",
+      "amountCents": 4250000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-08-10T10:45:08.131Z"
+    },
+    {
+      "id": "po_hist_2",
+      "amountCents": 3980000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-08-03T10:45:08.131Z"
+    }
+  ]
+}

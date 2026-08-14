@@ -1,0 +1,39 @@
+{
+  "accountId": "acct_1ArcEnergy",
+  "displayName": "ARC Energy Society — Stripe",
+  "livemode": true,
+  "webhooks": [
+    {
+      "id": "we_existing_org_arc_energy",
+      "url": "https://payments.fonteva.example/org_arc_energy/webhook",
+      "events": [
+        "charge.succeeded",
+        "invoice.payment_succeeded"
+      ],
+      "status": "enabled"
+    }
+  ],
+  "rates": [
+    {
+      "currency": "USD",
+      "percent": 2.9,
+      "fixedCents": 30
+    }
+  ],
+  "payouts": [
+    {
+      "id": "po_hist_1",
+      "amountCents": 4250000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-07-20T12:06:27.483Z"
+    },
+    {
+      "id": "po_hist_2",
+      "amountCents": 3980000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-07-13T12:06:27.483Z"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "accountId": "acct_1LatamFarmers",
+  "displayName": "LATAM Farmers Cooperative — Stripe",
+  "livemode": true,
+  "webhooks": [
+    {
+      "id": "we_existing_org_latam_farmers",
+      "url": "https://payments.fonteva.example/org_latam_farmers/webhook",
+      "events": [
+        "charge.succeeded"
+      ],
+      "status": "enabled"
+    }
+  ],
+  "rates": [
+    {
+      "currency": "USD",
+      "percent": 2.9,
+      "fixedCents": 30
+    }
+  ],
+  "payouts": [
+    {
+      "id": "po_hist_1",
+      "amountCents": 4250000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-08-10T08:20:23.301Z"
+    },
+    {
+      "id": "po_hist_2",
+      "amountCents": 3980000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-08-03T08:20:23.301Z"
+    }
+  ]
+}

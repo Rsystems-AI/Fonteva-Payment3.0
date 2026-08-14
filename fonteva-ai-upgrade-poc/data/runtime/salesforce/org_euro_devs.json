@@ -1,0 +1,92 @@
+{
+  "orgId": "org_euro_devs",
+  "packageVersion": "3.02",
+  "permissions": {
+    "fonteva_admin": true,
+    "payments_api": true,
+    "metadata_deploy": true
+  },
+  "scheduledJobs": [
+    {
+      "name": "FontevaPaymentsSync",
+      "cron": "0 */10 * * * ?",
+      "active": true,
+      "class": "PaymentsSyncJob"
+    },
+    {
+      "name": "FontevaStripeWebhookRelay",
+      "cron": "0 */5 * * * ?",
+      "active": true,
+      "class": "StripeWebhookRelay"
+    },
+    {
+      "name": "FontevaPayoutReconciliation",
+      "cron": "0 15 2 * * ?",
+      "active": true,
+      "class": "PayoutReconciliationJob"
+    }
+  ],
+  "pageLayouts": [
+    {
+      "object": "FontevaCharge__c",
+      "layout": "Charge Standard Layout",
+      "version": 5,
+      "upgraded": true
+    },
+    {
+      "object": "FontevaCharge__c",
+      "layout": "Charge Compact Layout",
+      "version": 3,
+      "upgraded": true
+    },
+    {
+      "object": "FontevaPayout__c",
+      "layout": "Payout Standard Layout",
+      "version": 3,
+      "upgraded": true
+    },
+    {
+      "object": "FontevaPayout__c",
+      "layout": "Payout Ops Layout",
+      "version": 3,
+      "upgraded": true
+    }
+  ],
+  "customMetadata": [
+    {
+      "type": "PaymentsSettings__mdt",
+      "developerName": "Default",
+      "values": {
+        "RetryLimit": 3,
+        "EnablePayouts": true
+      }
+    },
+    {
+      "type": "PaymentsSettings__mdt",
+      "developerName": "PaymentsV3",
+      "values": {
+        "Enabled": true,
+        "WebhookRelayJob": "FontevaStripeWebhookRelay",
+        "TargetVersion": "3.02",
+        "RolloutTimestamp": "2026-07-20T08:35:46.131Z"
+      }
+    }
+  ],
+  "permissionSets": [
+    {
+      "name": "Fonteva Payments User",
+      "assigned": 127
+    },
+    {
+      "name": "Fonteva Payments Admin",
+      "assigned": 4
+    }
+  ],
+  "connectedApps": [
+    {
+      "name": "Stripe (Fonteva)",
+      "provider": "stripe",
+      "status": "connected"
+    }
+  ]
+}

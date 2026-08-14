@@ -1,0 +1,38 @@
+{
+  "accountId": "acct_1EuDevGuild",
+  "displayName": "European Developers Guild — Stripe",
+  "livemode": true,
+  "webhooks": [
+    {
+      "id": "we_existing_org_euro_devs",
+      "url": "https://payments.fonteva.example/org_euro_devs/webhook",
+      "events": [
+        "charge.succeeded"
+      ],
+      "status": "enabled"
+    }
+  ],
+  "rates": [
+    {
+      "currency": "USD",
+      "percent": 2.9,
+      "fixedCents": 30
+    }
+  ],
+  "payouts": [
+    {
+      "id": "po_hist_1",
+      "amountCents": 4250000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-07-17T08:35:36.183Z"
+    },
+    {
+      "id": "po_hist_2",
+      "amountCents": 3980000,
+      "currency": "USD",
+      "status": "paid",
+      "createdAt": "2026-07-10T08:35:36.183Z"
+    }
+  ]
+}
